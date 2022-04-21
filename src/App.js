@@ -1,14 +1,15 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <h1>Reddit Timer</h1>
-      <Routes>
-        <Route path="/" />
-        <Route path="/search" />
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<h1>Home</h1>} />
+          <Route path="/search" element={<h1>Search</h1>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
